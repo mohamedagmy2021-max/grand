@@ -1,0 +1,17 @@
+# Backend
+backend/node_modules/
+backend/attendance.db
+backend/attendance.db-*
+backend/.env
+
+# Flutter
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/build/
+mobile/android/.gradle/
+mobile/ios/Pods/
+mobile/pubspec.lock
+
+# OS
+.DS_Store
