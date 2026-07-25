@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم الحضور — مصنع الإيمان</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">إ</span>
+      <div class="brand-text">
+        <strong>مصنع الإيمان</strong>
+        <span>نظام الحضور والانصراف</span>
+      </div>
+    </div>
+    <div class="date-picker">
+      <label for="dateFilter">اليوم</label>
+      <input type="date" id="dateFilter">
+    </div>
+  </header>
+
+  <main>
+    <section class="stat-strip" id="statStrip">
+      <div class="stat-card">
+        <span class="stat-label">إجمالي الموظفين</span>
+        <span class="stat-value" id="statTotal">—</span>
+      </div>
+      <div class="stat-card accent-good">
+        <span class="stat-label">حضروا اليوم</span>
+        <span class="stat-value" id="statIn">—</span>
+      </div>
+      <div class="stat-card accent-warn">
+        <span class="stat-label">لم يسجلوا بعد</span>
+        <span class="stat-value" id="statOut">—</span>
+      </div>
+      <div class="stat-card accent-bad">
+        <span class="stat-label">محاولات خارج النطاق</span>
+        <span class="stat-value" id="statRejected">—</span>
+      </div>
+    </section>
+
+    <section class="records-section">
+      <div class="records-head">
+        <h2>سجل الحركة</h2>
+        <input type="text" id="employeeFilter" placeholder="فلترة بكود الموظف...">
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>الموظف</th>
+              <th>القسم</th>
+              <th>النوع</th>
+              <th>الوقت</th>
+              <th>المسافة عن الموقع</th>
+              <th>الحالة</th>
+            </tr>
+          </thead>
+          <tbody id="recordsBody">
+            <tr><td colspan="6" class="empty-state">جاري تحميل السجلات...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
